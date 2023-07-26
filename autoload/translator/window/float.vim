@@ -227,8 +227,8 @@ function! translator#window#float#create(linelist, configs) abort
   call nvim_win_set_option(bd_winid, 'winhl', 'Normal:TranslatorBorder')
 
   " NOTE: dont use call nvim_set_current_win(s:translator_winid)
-  noautocmd call win_gotoid(winid)
-  noautocmd wincmd p
+  " noautocmd call win_gotoid(winid)
+  " noautocmd wincmd p
   augroup close_translator_window
     autocmd!
     autocmd CursorMoved,CursorMovedI,InsertEnter,BufLeave <buffer>
